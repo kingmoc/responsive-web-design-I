@@ -1,3 +1,259 @@
-/* Use your own code or past solution for Great Idea Web Page CSS here! */
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    font-family: 'Titillium Web', sans-serif;
+}
+
+h1, h2, h3, h4, h5 {
+    margin-bottom: 15px;
+	font-family: 'Bangers', cursive;
+    letter-spacing: 1px;
+    margin-bottom: 15px;
+}
+
+p {
+    line-height: 1.4;
+}
+
+/* CSS Reset Code Above */
+
+.container {
+	max-width: 907.376px;
+	margin: 0 auto;
+	/* border: 1px solid red; */
+	padding: 20px 1.25%;
+}
+
+header {
+	display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+img {
+	max-width: 100%;
+	height: auto;
+}
+
+.navmenu {
+	display: flex;
+}
+
+.navmenu a {
+	text-decoration-line: none;
+    color: grey;
+    margin-right: 59px;
+}
+
+section.jumbo {
+	display: flex;
+    justify-content: space-evenly;
+	align-items: center;
+	margin-top: 50px;
+	border-bottom: 1px solid black;
+	padding-bottom: 50px;
+    
+}
+
+.jumbo-text {
+	font-size: 70px;
+    text-align: center;
+}
+
+.jumbo-text button {
+	font-size: 21px;
+    padding: 9px;
+    width: 206px;
+    background-color: white;
+    color: black;
+    border: 1px solid black;
+}
+
+.top-content {
+	display: flex;
+	margin-top: 40px;
+	margin-bottom: 35px;
+}
+
+.bottom-content {
+	display: flex;
+	margin-top: 40px;
+	border-bottom: 1px solid black;
+	padding-bottom: 50px;
+	margin-bottom: 40px;
+}
+
+.services {
+	border-bottom: 1px solid black;
+	padding-bottom: 40px;
+	margin-bottom: 40px;
+}
+
+section.service-info {
+	display: flex;
+    flex-wrap: wrap;
+    align-content: space-evenly;
+	justify-content: space-between;
+	border-bottom: 1px solid black;
+	padding-bottom: 30px;
+	
+}
+
+section.service-info .info-box {
+	background: #f4f3f4;
+    width: 48%;
+    height: auto;
+	border: 1px solid black;
+	display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+	padding: 15px;
+	margin: 15px 0;
+}
+
+.info-box button {
+	border-radius: 5px;
+    width: 122px;
+    height: 30px;
+    background-color: white;
+    border: 1px solid black;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+
+.info-box p {
+	margin-bottom: 25px;
+    line-height: 20px;
+}
+
+.facts {
+	display: flex;
+	justify-content: space-between;
+	margin-top: 35px;
+}
+
+.facts ul {
+	list-style-type:square;
+	list-style-position: inside;
+}
+
+.factsText ul li {
+	margin-bottom: 10px;
+}
+
+.factsText p {
+	line-height: 22px;
+	margin-bottom: 20px;
+	width: 90%;
+}
 
 
+
+/* Media Queries */
+
+@media (max-width: 800px) {
+    header {
+	  flex-direction: column-reverse;
+	}
+	
+	.navmenu {
+		margin-top: 42px;
+	}
+
+	.jumbo .logo {
+		display:none;
+	}
+}
+
+@media (max-width: 500px) {
+	.navmenu {
+		flex-direction: column;
+		margin-top: 20px;
+	}
+
+	.navmenu a {
+		margin-right: 0;
+		border-bottom: solid grey 1px;
+		margin: 12px 0;
+		width: 483px;
+		text-align: center;
+		padding-bottom: 20px;
+	}
+
+	.nav-services {
+		border-top: solid grey 1px;
+    	padding-top: 20px;
+	}
+
+	.top-content,.bottom-content {
+		flex-direction: column;
+	}
+
+	.col-text,.bc-text {
+		margin: 35px 0;
+	}
+
+	.service-info {
+		flex-direction: column;
+	}
+
+	section.service-info .info-box{
+		width: 100%;
+	}
+
+	.facts {
+		flex-direction: column;
+	}
+
+}
